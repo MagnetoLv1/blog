@@ -31,4 +31,9 @@ class User extends Authenticatable
     public function Posts(){
         return $this->hasMany(Post::class);
     }
+
+
+    public function isAdmin(){
+        return $this->id == 1;
+    }
 }
